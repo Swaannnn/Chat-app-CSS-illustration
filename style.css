@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    font-family: Rubik;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    
+} */
+
+.background {
+    position: absolute;
+    height: 90%;
+    width: 35%;
+    background: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 0 0 250px 250px;
+
+    z-index: -1;
+}
+
+.phone {
+    position: absolute;
+    left: 30%;
+
+    width: 290px;
+    height: 600px;
+
+    border: 10px solid white;
+    border-radius: 30px;
+    box-shadow:0px 1px 20px 5px rgba(0,0,0,0.1);
+
+    background-color: #f5f3f8;
+}
+
+.phone-top {
+    position: absolute;
+    margin: 0 50px;
+    background-color: white;
+    border-radius: 0 0 18px 18px;
+    width: 180px;
+    height: 25px;
+}
+
+.phone-head {
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 20px 20px 5px 5px;
+
+    height: 50px;
+    padding-top: 40px;
+
+    display: grid;
+    grid-template-columns: 10% 20% 60% 10%;
+}
+
+.phone-head-text {
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+#samuel {
+    height: 28px;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
+.messages {
+    /* display: flex; */
+}
+
+.left1 {
+    padding-bottom: 5px;
+}
+
+.leftText1, .leftText2, .leftText3 {
+    color: hsl(276, 55%, 52%);
+    background-color: #ede5f4;
+
+    border-radius: 10px 10px 10px 5px;
+}
+
+.right {
+    /* display: flex;
+    flex-direction: column; */
+    transform: translateX(120px);
+}
+
+.rightImages {
+    transform: translateX(-7px);
+}
+
+.dog {
+    height: 48px;
+    border-radius: 12px;
+    margin: 3px;
+}
+
+.rightText1, .rightText2 {
+    color: hsl(271, 15%, 43%);
+    background-color: white;
+
+    border-radius: 10px 10px 5px 10px;
+
+    box-shadow:0px 1px 10px 5px rgba(0,0,0,0.05);
+}
+
+.left2 {
+    margin-top: 20px;
+}
+
+.leftNotif1, .leftNotif2 {
+    color: white;
+    background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    
+    border-radius: 10px 10px 10px 5px;
+}
+
+.leftText1, .leftText2, .rightText1, .rightText2, .leftText3, .leftNotif1, .leftNotif2 {
+    font-size: 9px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 10px;
+    max-width: 130px;
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%)
+}
