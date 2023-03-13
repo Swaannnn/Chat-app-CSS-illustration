@@ -4,7 +4,9 @@
     font-family: Rubik;
     margin: 0;
     padding: 0;
+}
 
+body {
     overflow-x: hidden;
 }
 
@@ -39,10 +41,6 @@
 }
 
 .phone {
-    /* position: absolute;
-    left: 20%;
-    top: 5%; */
-
     width: 290px;
     height: 592px;
 
@@ -85,12 +83,6 @@
     transform: translateY(9px) translateX(15px) rotate(-68deg);
 
     background-color: white;
-}
-
-.phone-head .arrow {
-    color: black;
-
-    /* border: 2px solid red; */
 }
 
 .phone-head .arrow::after {
@@ -249,35 +241,36 @@
     transform: translateY(2px);
 }
 
+.sendMessage .arrow::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 8px;
+    border-radius: 20px;
+
+    transform: translateY(11px) translateX(11px) rotate(45deg);
+
+    background-color: white;
+}
+
 .sendMessage .arrow {
     height: 28px;
     width: 28px;
-    background-color: black;
+    background-color: #2b0e3a;
     border-radius: 50%;
 }
 
-/* .sendMessage .arrow::before {
-    position: absolute;
-    content: '';
-    background-color: white;
-    padding: 2px;
-    width: 15px;
-
-    border: 1px solid red;
-    transform:  rotate(45deg);
-}
-
 .sendMessage .arrow::after {
-    position: absolute;
     content: '';
+    position: absolute;
+    height: 3px;
+    width: 8px;
+    border-radius: 20px;
+
+    transform: translateY(15px) translateX(11px) rotate(-45deg);
+
     background-color: white;
-    padding: 2px;
-    width: 15px;
-
-    border: px solid green;
-
-    transform: rotate(-45deg) translate(0 10px);
-} */
+}
 
 .text {
     max-width: 420px;
@@ -310,8 +303,12 @@ footer a {
     color: hsl(228, 45%, 44%)
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .container {
         flex-direction: column;
+    }
+
+    body {
+        overflow-y: scroll;
     }
 }
