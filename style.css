@@ -5,12 +5,8 @@
     margin: 0;
     padding: 0;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
-
-/* body {
-    
-} */
 
 .backgroundL {
     position: absolute;
@@ -27,20 +23,27 @@
     position: absolute;
     bottom: 0;
     right: -170px;
-    /* SUPPRIMER SCROLL DU AU DEPASSEMENT */
     height: 90%;
     width: 35%;
-    background: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    /* background: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%)); */
+    background-color: #efefef;
     border-radius: 250px 250px 0 0;
-    opacity: 0.05;
+    /* opacity: 0.05; */
 
     z-index: -1;
 }
 
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .phone {
-    position: absolute;
+    /* position: absolute;
     left: 20%;
-    top: 5%;
+    top: 5%; */
 
     width: 290px;
     height: 592px;
@@ -50,6 +53,8 @@
     box-shadow:0px 1px 20px 5px rgba(0,0,0,0.1);
 
     background-color: #f5f3f8;
+    
+    overflow: hidden;
 }
 
 .phone-top {
@@ -72,7 +77,34 @@
     grid-template-columns: 10% 15% 65% 10%;
 }
 
+.phone-head .arrow::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 7px;
+    border-radius: 20px;
+
+    transform: translateY(9px) translateX(15px) rotate(-68deg);
+
+    background-color: white;
+}
+
 .phone-head .arrow {
+    color: black;
+
+    /* border: 2px solid red; */
+}
+
+.phone-head .arrow::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 7px;
+    border-radius: 20px;
+
+    transform: translateY(14px) translateX(15px) rotate(68deg);
+
+    background-color: white;
 }
 
 #samuel {
@@ -97,7 +129,21 @@
     font-size: 9px;
 }
 
+/* .points {
+    border: 1px solid green;
+} */
+
+.point {
+    height: 2px;
+    width: 2px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 2px;
+}
+
 /* .messages {
+
 } */
 
 .left1 {
@@ -195,6 +241,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transform: translateY(-10px);
 }
 
 .sendMessage p {
@@ -234,12 +281,13 @@
     transform: rotate(-45deg) translate(0 10px);
 } */
 
-section {
-    position: absolute;
+.text {
     max-width: 420px;
 
     top: 40%;
     left: 50%;
+    
+    overflow: hidden;
 }
 
 h1 {
@@ -262,4 +310,10 @@ footer {
 
 footer a {
     color: hsl(228, 45%, 44%)
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
 }
