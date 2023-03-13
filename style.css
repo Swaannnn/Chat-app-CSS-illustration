@@ -231,7 +231,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transform: translateY(-10px);
 }
 
 .sendMessage p {
@@ -310,5 +309,14 @@ footer a {
 
     body {
         overflow-y: scroll;
+    }
+}
+
+@media screen and (min-height: 900px) {
+    .leftNotif1, .leftNotif2 {
+        padding: 15px 20px 10px 10px;
+    }
+    .price {
+        transform: translateY(-2px);
     }
 }
